@@ -1,0 +1,1 @@
+cmd_Release/obj.target/engine.node := g++ -o Release/obj.target/engine.node -shared -pthread -rdynamic -m64  -Wl,-soname=engine.node -Wl,--start-group Release/obj.target/engine/engine/engine.o -Wl,--end-group -L/home/paulux/Documents/Code/FyneWav/engine/lib -lstk -lasound -lpthread -lm

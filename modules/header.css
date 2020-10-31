@@ -1,0 +1,129 @@
+div#app-header-container {
+    background-color: var(--color-black-light);
+    width: 100vw;
+    height: var(--app-header-height);
+    margin: 0px; padding: 0px;
+    display: flex;
+    flex-direction: column;
+    border: solid 4px var(--color-black-dark);
+    resize: both;
+}
+
+div#app-header-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: calc(var(--app-header-height) - var(--app-resize-bar-width));
+}
+
+div#app-header-menus-centerer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+    margin: 0px; margin-left: 4px;
+}
+
+div#app-header-menus-container {
+    border: solid var(--app-header-border-width) var(--color-primary-1);
+    border-radius: var(--app-border-radius);
+    width: fit-content;
+    margin: 0px; padding: 2px;
+    display: inline-flex;
+}
+
+.app-header-menu {
+    font-family: "Comfortaa bold";
+    font-size: 20px;
+    margin: 0px 4px; padding: 0px;
+    color: var(--color-primary-1);
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+    transition: transform var(--animation-quick) var(--animation-ease);
+} .app-header-menu:hover {color: var(--color-white-dark); transform: scale(var(--app-select-scale));}
+
+div#app-header-buttons-centerer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+    margin: 0px; margin-left: 8px;
+}
+
+div#app-header-buttons-container {
+    width: fit-content;
+    margin: 0px; padding: 2px;
+    display: inline-flex;
+}
+
+.app-header-button {
+    font-family: "Comfortaa bold";
+    font-size: 20px;
+    margin: 0px 4px; padding: 0px;
+    color: var(--color-white-light);
+    cursor: pointer;
+    user-select: none;
+}
+
+div#app-header-time-centerer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: inherit;
+}
+
+div#app-header-time-container {
+    width: fit-content;
+    margin: 0px; padding: 2px;
+}
+
+#app-header-timer {
+    font-family: "Comfortaa bold";
+    font-size: 20px;
+    margin: 0px 4px; padding: 0px;
+    color: var(--color-white-light);
+    user-select: none;
+}
+
+div#app-header-tabs-centerer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px; margin-left: 8px;
+}
+
+div#app-header-tabs-container {
+    border: solid var(--app-header-border-width) var(--color-white-light);
+    border-radius: var(--app-border-radius);
+    width: fit-content;
+    height: 75%;
+    margin: 0px; padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.app-header-option {
+    height: 90%;
+    margin: auto 8px; padding: 0px;
+    border: solid 2px var(--color-white-light);
+    border-radius: var(--app-border-radius);
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+    transition: transform var(--animation-quick) var(--animation-ease);
+} .app-header-option:hover {transform: scale(var(--app-select-scale));}
+
+div#app-level-container {
+    height: 70%;
+    width: 30px;
+    background-color: blue;
+}
+div#app-level-div {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}

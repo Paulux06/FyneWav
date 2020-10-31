@@ -1,0 +1,30 @@
+div#app-scroll-menu-container {
+    background-color: var(--color-black-light);
+    min-height: 10px;
+    min-width: 80px;
+    height: fit-content;
+    width: fit-content;
+    margin: 0px; padding: 4px;
+    position: fixed;
+    top: 42px; left: 0px;
+    border: solid 1px var(--color-primary-1);
+    border-radius: var(--app-border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transform-origin: 50% 0%;
+    transform: scale(1, 0);
+    transition: transform var(--animation-quick) var(--animation-ease),
+    top var(--animation-quick) var(--animation-ease),
+    left var(--animation-quick) var(--animation-ease);
+}
+
+p#app-scroll-menu-option {
+    font-size: 16px;
+    color: var(--color-white-light);
+    font-family: "Comfortaa bold";
+    margin: 8px;
+    cursor: pointer;
+    user-select: none;
+    transform: scale(1);
+    transition: transform var(--animation-quick) var(--animation-ease);
+} p#app-scroll-menu-option:hover {color: var(--color-white-dark); transform: scale(var(--app-select-scale));}

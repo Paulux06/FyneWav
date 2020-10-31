@@ -1,0 +1,82 @@
+div#app-sequenceur-div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    overflow: scroll;
+    width: calc(100% - var(--app-explorer-width) - 6px);
+    height: 100%;
+}
+
+div#app-sequenceur-cursor-band {
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    background-color: var(--color-black-light);
+    border-bottom: solid 2px var(--color-black-dark);
+    overflow: hidden;
+    user-select: none;
+}
+div#app-sequenceur-cursor-div {
+    background-color: var(--color-white-dark);
+    position: relative;
+    top: 0px;
+    height: 100%;
+    width: 6px;
+    left: var(--app-piste-name-width);
+    cursor: ew-resize;
+}
+
+div#app-sequenceur-piste-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.app-sequenceur-piste-div {
+    display: inline-flex;
+    background-color: var(--color-black-light);
+    border-top: solid 2px var(--color-black-light);
+    border-bottom: solid 2px var(--color-black-light);
+    height: 50px;
+    width: fit-content;
+    min-width: 100vw;
+}
+
+div.app-sequenceur-piste-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    background-color: var(--color-black-dark);
+    border-right: solid 4px var(--color-black-light);
+    width: calc(var(--app-piste-name-width) - 4px);
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+input.app-sequenceur-piste-title {
+    border: none;
+    outline: none;
+    background-color: var(--color-black-dark);
+    font-family: "Comfortaa";
+    font-size: 20px;
+    text-align: left;
+    margin: auto 0px;
+    padding: 0px 4px;
+    color: var(--color-white-dark);
+    white-space: nowrap;
+}
+
+div.app-sequenceur-piste-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: fit-content;
+    height: 100%;
+}
+
+div.app-sequenceur-pattern-div {
+    height: 100%;
+    border-radius: 6px;
+}

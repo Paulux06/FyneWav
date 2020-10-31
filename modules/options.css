@@ -1,0 +1,8 @@
+h1#app-options-title {
+    color: var(--color-primary-1);
+    font-family: "Comfortaa bold";
+    font-size: 20px;
+    border-bottom: solid 2px var(--color-primary-1);
+    margin: 0px;
+    padding: 0px;
+}

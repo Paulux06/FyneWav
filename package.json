@@ -1,0 +1,19 @@
+{
+  "name": "fynewav",
+  "version": "0.1.0",
+  "description": "Making music is easier than ever",
+  "main": "main.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "electron ."
+  },
+  "keywords": [
+    "Music"
+  ],
+  "author": "Paulux",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.5",
+    "electron-rebuild": "^2.3.2"
+  }
+}

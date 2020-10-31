@@ -1,0 +1,108 @@
+@keyframes folder-in {
+    0%{max-height: 0px; opacity: 0;}
+    100%{max-height: 30px; opacity: 1;}
+}
+@keyframes folder-out {
+    0%{max-height: 30px; opacity: 1;}
+    100%{max-height: 0px; opacity: 0;}
+}
+
+div#app-explorer-container {
+    background-color: var(--color-black-light);
+    width: var(--app-explorer-width);
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2.folder-title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Comfortaa bold";
+    color: var(--color-white-light);
+    user-select: none;
+    background-color: var(--color-black-dark);
+    height: fit-content;
+    width: 100%;
+    margin: 0px;
+    position: sticky;
+    top: 0px; left: 0px;
+    padding: 0px 2px;
+}
+div#folders-container {
+    flex: 1;
+}
+
+div.folder-div {
+    display: flex;
+    flex-direction: column;
+    animation: folder-in var(--animation-normal) var(--animation-ease);
+}
+div.remove {
+    animation: folder-out var(--animation-normal) var(--animation-ease);
+}
+div.folder-top {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    width: fit-content;
+}
+p.folder-name {
+    color: var(--color-white-dark);
+    font-size: 16px;
+    font-family: "Comfortaa";
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    padding: 0px 10px;
+    white-space: nowrap;
+    background-color: var(--color-black-light);
+    border-left: solid 4px var(--color-black-dark);
+    transition: color var(--animation-quick) var(--animation-ease),
+        background-color var(--animation-quick) var(--animation-ease),
+        padding-left var(--animation-quick) var(--animation-ease);
+} p.folder-name:hover {
+    background-color: var(--color-black-dark);
+}
+p.selected {
+    font-family: "Comfortaa bold";
+    color: var(--color-white-light);
+    background-color: var(--color-black-dark);
+    padding: 0px 16px;
+}
+div.folder-bottom {
+    background-color: var(--color-black-light);
+    padding-left: 12px;
+    min-width: fit-content;
+}
+
+div.file-div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    animation: folder-in var(--animation-normal) var(--animation-ease);
+}
+div.remove {
+    animation: folder-out var(--animation-normal) var(--animation-ease);
+}
+p.file-name {
+    font-size: 16px;
+    font-family: "Comfortaa";
+    margin: 0px;
+    padding: 0px;
+    user-select: none;
+    padding: 0px 10px;
+    white-space: nowrap;
+    background-color: var(--color-black-light);
+    border-left: solid 4px var(--color-black-dark);
+    transition: color var(--animation-quick) var(--animation-ease),
+        background-color var(--animation-quick) var(--animation-ease),
+        padding-left var(--animation-quick) var(--animation-ease);
+} p.file-name:hover {
+    background-color: var(--color-black-dark);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+        <title>FyneWav</title>
+        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="modules/header.css">
+        <link rel="stylesheet" href="modules/explorer.css">
+        <link rel="stylesheet" href="modules/production.css">
+        <link rel="stylesheet" href="modules/scrollmenu.css">
+        <link rel="stylesheet" href="modules/sequenceur.css">
+        <link rel="stylesheet" href="modules/options.css">
+        <script src="modules/script.js"></script>
+        <script src="modules/scrollMenu.js"></script>
+        <script src="modules/explorer.js"></script>
+        <script src="modules/popup.js"></script>
+        <script src="modules/sequenceur.js"></script>
+        <script src="modules/options.js"></script>
+    </head>
+    <body>
+        <div id="window-container">
+            <div id="app-header-container">
+                <div id="app-header-content">
+                    <div id="app-header-menus-centerer">
+                        <div id="app-header-menus-container">
+                            <h1 class="app-header-menu" id="menu-files">Fichiers</h1>
+                            <h1 class="app-header-menu" id="menu-plugins">Plugins</h1>
+                            <h1 class="app-header-menu" id="menu-options">Options</h1>
+                        </div>
+                    </div>
+                    <div id="app-header-buttons-centerer">
+                        <div id="app-header-buttons-container">
+                            <div id="play-button" class="app-header-button" onclick="playAudio();">play</div>
+                            <div id="stop-button" class="app-header-button" onclick="stopAudio();">stop</div>
+                        </div>
+                    </div>
+                    <div id="app-header-time-centerer">
+                        <div id="app-header-time-container">
+                            <h1 id="app-header-timer">00:00:00</h1>
+                        </div>
+                    </div>
+                    <div id="app-header-tabs-centerer">
+                        <div id="app-header-tabs-container">
+                            <img class="app-header-option" src="./resources/icons/sequenceur_icon.png" alt="icon"/>
+                            <img class="app-header-option" src="./resources/icons/channelrack_icon.png" alt="icon"/>
+                            <img class="app-header-option" src="./resources/icons/mixer_icon.png" alt="icon"/>
+                        </div>
+                    </div>
+                    <div id="app-level-container">
+                        <div id="app-level-div"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="app-content-container">
+                <div id="app-explorer-container"></div>
+                <div id="app-production-container">
+                    <div id="app-top-production">
+                        <div id="app-sequenceur-container">
+                            <div id="app-sequenceur-div">
+                                <div id="app-sequenceur-cursor-band">
+                                    <div id="app-sequenceur-cursor-div"></div>
+                                </div>
+                                <div id="app-sequenceur-piste-container"></div>
+                                <div id="app-sequenceur-piste-adder"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="app-bottom-production">
+                        <div id="app-channel-rack-container">
+                            <div id="app-channel-rack-div"></div>
+                        </div>
+                        <div id="app-mixer-container">
+                            <div id="app-mixer-div"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="app-scroll-menu-container"></div>
+        <div id="app-popup-container">
+            <div id="app-popup-div">
+                
+            </div>
+        </div>
+    </body>
+</html>
