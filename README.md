@@ -18,7 +18,7 @@ This software is powered up by two main languages:
 - [C++](https://fr.wikipedia.org/wiki/C%2B%2B) pour la partie backend (gestion de l'audio)
 - [JavaScript](https://fr.wikipedia.org/wiki/JavaScript) pour la partie frontend (interface)
 
-This makes the software able to propose not only a really simple addon / extensions system thanks to [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) and [CSS](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade), but also a very powerful and smooth audio engine thanks to [C++](https://fr.wikipedia.org/wiki/C%2B%2B) for intensive calculations.
+This makes the software able to propose not only a really simple addon / extensions system for computer novices thanks to [HTML](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language) and [CSS](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade), but also a very powerful and smooth audio engine thanks to [C++](https://fr.wikipedia.org/wiki/C%2B%2B) for intensive calculations.
 
 This software targets Unix based systems, by offering a free alternative to proprietary softwares like FL Studio or Ableton, but with a native compatibility with the penguin's os.
 
