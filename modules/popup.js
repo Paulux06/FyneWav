@@ -1,15 +1,14 @@
-function spawnPopup(populateFunction) {
+function spawnPopup(populateFunction, args) {
     var popup = document.getElementById("app-popup-container");
     popup.style.display = "flex";
     if (popup.classList.contains("remove-popup-container"))
-    popup.classList.remove("remove-popup-container")
+        popup.classList.remove("remove-popup-container");
     popup.classList.add("spawn-popup-container");
-    popup.onclick = removePopup;
     popup = document.getElementById("app-popup-div");
-    populateFunction(popup);
+    populateFunction(popup, args);
     popup.style.display = "block";
     if (popup.classList.contains("remove-popup-div"))
-        popup.classList.remove("remove-popup-div")
+        popup.classList.remove("remove-popup-div");
     popup.classList.add("spawn-popup-div");
 }
 function removePopup() {

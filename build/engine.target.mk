@@ -45,15 +45,15 @@ CFLAGS_CC_Debug := \
 	-fexceptions
 
 INCS_Debug := \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/include/node \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/src \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/openssl/config \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/openssl/openssl/include \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/uv/include \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/zlib \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/v8/include \
-	-I/home/paulux/Documents/Code/FyneWav/engine/include \
-	-I/home/paulux/Documents/Code/FyneWav/engine
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/include/node \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/src \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/openssl/config \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/openssl/openssl/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/uv/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/zlib \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/v8/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/engine/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/engine
 
 DEFS_Release := \
 	'-DNODE_GYP_MODULE_NAME=engine' \
@@ -95,18 +95,18 @@ CFLAGS_CC_Release := \
 	-fexceptions
 
 INCS_Release := \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/include/node \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/src \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/openssl/config \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/openssl/openssl/include \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/uv/include \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/zlib \
-	-I/home/paulux/Documents/Code/FyneWav/10.1.5/deps/v8/include \
-	-I/home/paulux/Documents/Code/FyneWav/engine/include \
-	-I/home/paulux/Documents/Code/FyneWav/engine
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/include/node \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/src \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/openssl/config \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/openssl/openssl/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/uv/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/zlib \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/deps/v8/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/engine/include \
+	-I/home/paulux/Documents/Code/FyneWav/FyneWav/engine
 
 OBJS := \
-	$(obj).target/$(TARGET)/engine/engine.o
+	$(obj).target/$(TARGET)/engine/wrapper.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
@@ -143,7 +143,7 @@ LDFLAGS_Release := \
 	-m64
 
 LIBS := \
-	-L/home/paulux/Documents/Code/FyneWav/engine/lib \
+	-L/home/paulux/Documents/Code/FyneWav/FyneWav/engine/lib \
 	-lstk \
 	-lasound \
 	-lpthread \

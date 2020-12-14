@@ -1,0 +1,53 @@
+@keyframes opac-in {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes opac-out {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+div#app-popup-container {
+    display: none;
+    user-select: none;
+    position: fixed;
+    top: 0px; bottom: 0px;
+    left: 0px; right: 0px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+div.spawn-popup-container {animation: opac-in var(--animation-quick) forwards;}
+div.remove-popup-container {animation: opac-out var(--animation-quick) forwards;}
+
+@keyframes spawn-in {
+    0%{width: 50%;height: 50%;}
+    100%{width: 80%;height: 80%;}
+}
+@keyframes spawn-out {
+    0%{width: 80%;height: 80%;}
+    100%{width: 50%;height: 50%;}
+}
+div#app-popup-div {
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0px auto;
+    padding: 4px; padding-bottom: 20px;
+    background-color: var(--color-black-dark);
+    border-radius: var(--app-border-radius);
+    border: solid 2px var(--color-black-light);
+    box-shadow: 0px 0px 20px #0006;
+    overflow: hidden;
+}
+div.spawn-popup-div {animation: spawn-in var(--animation-quick) forwards;}
+div.remove-popup-div {animation: spawn-out var(--animation-quick) forwards;}
+
+h1#app-popup-title {
+    color: var(--color-blue-light);
+    font-family: "fynewav light";
+    font-size: 18px;
+    border-bottom: solid 2px var(--color-blue-light);
+    margin: 0px auto; padding: 0px;
+    padding-bottom: 4px;
+    text-align: center;
+}

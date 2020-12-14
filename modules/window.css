@@ -1,0 +1,103 @@
+div.window-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 0px 20px #0002;
+    min-width: 4px;
+    min-height: 18px;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+div.window-topframe {
+    position: relative;
+    cursor: move;
+    display: inline-flex;
+    background-color: var(--color-black-dark);
+    filter: brightness(0.85);
+    height: 14px; width: 100%;
+}
+div.window-leftframe {
+    position: absolute;
+    left: 0px; width: 4px;
+    top: 14px; bottom: 4px;
+    background-color: var(--color-black-dark);
+    filter: brightness(0.85);
+}
+div.window-rightframe {
+    position: absolute;
+    right: 0px; width: 4px;
+    top: 14px; bottom: 4px;
+    cursor: ew-resize;
+    background-color: var(--color-black-dark);
+    filter: brightness(0.85);
+}
+div.window-bottomframe {
+    position: absolute;
+    bottom: 0px; height: 4px;
+    left: 4px; right: 4px;
+    cursor: ns-resize;
+    background-color: var(--color-black-dark);
+    filter: brightness(0.85);
+}
+div.window-corner-left {
+    position: absolute;
+    bottom: 0px; height: 4px;
+    left: 0px; width: 4px;
+    background-color: var(--color-black-dark);
+    filter: brightness(0.85);
+}
+div.window-corner-right {
+    position: absolute;
+    bottom: 0px; height: 4px;
+    right: 0px; width: 4px;
+    cursor: nwse-resize;
+    background-color: var(--color-black-dark);
+    filter: brightness(0.85);
+}
+div.window-content-container {
+    position: absolute;
+    box-shadow: 0px 0px 20px #0001 inset;
+    cursor: default;
+    top: 14px; bottom: 4px;
+    right: 4px; left: 4px;
+    background-color: var(--color-black-dark);
+    border-radius: var(--app-border-radius);
+    overflow: scroll;
+}
+
+div.window-name-centerer {
+    position: absolute;
+    top: 0px; bottom: 0px;
+    left: 50%;
+    height: 100%;
+    width: fit-content;
+    margin: 0px 0px; padding: 0px;
+}
+
+h2.window-name-text {
+    font-family: "fynewav light";
+    font-size: 90%;
+    height: 100%;
+    transform: translate(-50%, -10%) scale(0.85);
+    width: fit-content;
+    color: var(--color-white-light);
+    margin: auto auto; padding: 0px;
+    user-select: none;
+}
+
+div.window-icons {
+    position: absolute;
+    right: 0px;
+    display: inline-flex;
+    height: 100%;
+    margin: 0px; padding: 0px;
+    width: fit-content;
+    user-select: none;
+}
+
+img.window-close, img.window-maximize, img.window-minimize {
+    height: 100%;
+    margin: 0px 4px; padding: 0px;
+    -webkit-user-drag: none;
+    cursor: pointer;
+}

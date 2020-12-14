@@ -23,7 +23,7 @@ h2.folder-title {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-    font-family: "Comfortaa bold";
+    font-family: "fynewav";
     color: var(--color-white-light);
     user-select: none;
     background-color: var(--color-black-dark);
@@ -54,29 +54,27 @@ div.folder-top {
 }
 p.folder-name {
     color: var(--color-white-dark);
-    font-size: 16px;
-    font-family: "Comfortaa";
+    font-size: var(--app-explorer-font-size);
+    font-family: "fynewav";
     margin: 0px;
     padding: 0px;
     user-select: none;
     padding: 0px 10px;
     white-space: nowrap;
-    background-color: var(--color-black-light);
-    border-left: solid 4px var(--color-black-dark);
+    border-left: solid 4px var(--color-black-light);
     transition: color var(--animation-quick) var(--animation-ease),
         background-color var(--animation-quick) var(--animation-ease),
         padding-left var(--animation-quick) var(--animation-ease);
 } p.folder-name:hover {
-    background-color: var(--color-black-dark);
+    background-color: var(--color-black-light);
 }
 p.selected {
-    font-family: "Comfortaa bold";
+    font-family: "fynewav";
     color: var(--color-white-light);
-    background-color: var(--color-black-dark);
+    background-color: var(--color-black-light);
     padding: 0px 16px;
 }
 div.folder-bottom {
-    background-color: var(--color-black-light);
     padding-left: 12px;
     min-width: fit-content;
 }
@@ -91,18 +89,17 @@ div.remove {
     animation: folder-out var(--animation-normal) var(--animation-ease);
 }
 p.file-name {
-    font-size: 16px;
-    font-family: "Comfortaa";
+    font-size: var(--app-explorer-font-size);
+    font-family: "fynewav";
     margin: 0px;
     padding: 0px;
     user-select: none;
     padding: 0px 10px;
     white-space: nowrap;
-    background-color: var(--color-black-light);
-    border-left: solid 4px var(--color-black-dark);
+    border-left: solid 4px var(--color-black-light);
     transition: color var(--animation-quick) var(--animation-ease),
         background-color var(--animation-quick) var(--animation-ease),
         padding-left var(--animation-quick) var(--animation-ease);
 } p.file-name:hover {
-    background-color: var(--color-black-dark);
+    background-color: var(--color-black-light);
 }

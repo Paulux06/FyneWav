@@ -1,13 +1,13 @@
 var sequenceurData = [
     {
-        title: "Piste 1", color: "#00AAFF",
+        title: "Piste 1", color: "var(--color-green-light)",
         pattern: [
             {width: 2},
             {width: 4}
         ]
     },
     {
-        title: "Piste 2", color: "#FFAA00",
+        title: "Piste 2", color: "var(--color-yellow-light)",
         pattern: [
             {width: 2}
         ]

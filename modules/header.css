@@ -1,109 +1,120 @@
 div#app-header-container {
-    background-color: var(--color-black-light);
+    display: inline-flex;
+    background-color: var(--color-black-dark);
     width: 100vw;
     height: var(--app-header-height);
     margin: 0px; padding: 0px;
-    display: flex;
-    flex-direction: column;
-    border: solid 4px var(--color-black-dark);
-    resize: both;
+    border-bottom: solid 2px var(--color-black-light);
 }
 
 div#app-header-content {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     height: 100%;
-    width: calc(var(--app-header-height) - var(--app-resize-bar-width));
-}
-
-div#app-header-menus-centerer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: inherit;
-    margin: 0px; margin-left: 4px;
+    width: 100%;
 }
 
 div#app-header-menus-container {
-    border: solid var(--app-header-border-width) var(--color-primary-1);
     border-radius: var(--app-border-radius);
+    box-shadow: var(--app-box-shadow);
     width: fit-content;
-    margin: 0px; padding: 2px;
+    margin: 0px; padding: 6px 4px;
     display: inline-flex;
 }
 
 .app-header-menu {
-    font-family: "Comfortaa bold";
-    font-size: 20px;
+    font-family: "fynewav light";
+    font-size: 18px;
     margin: 0px 4px; padding: 0px;
-    color: var(--color-primary-1);
+    color: var(--color-white-dark);
     cursor: pointer;
     user-select: none;
     transform: scale(1);
-    transition: transform var(--animation-quick) var(--animation-ease);
-} .app-header-menu:hover {color: var(--color-white-dark); transform: scale(var(--app-select-scale));}
-
-div#app-header-buttons-centerer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: inherit;
-    margin: 0px; margin-left: 8px;
-}
+    transition: color var(--animation-quick) var(--animation-ease);
+} .app-header-menu:hover {color: var(--color-blue-light);;}
 
 div#app-header-buttons-container {
     width: fit-content;
-    margin: 0px; padding: 2px;
+    height: 60%;
+    margin: 0px; padding: 0px 8px;
     display: inline-flex;
 }
 
 .app-header-button {
-    font-family: "Comfortaa bold";
-    font-size: 20px;
     margin: 0px 4px; padding: 0px;
+    height: 100%;
+    border: solid var(--app-border-width) var(--color-white-light);
+    border-radius: var(--app-border-radius);
     color: var(--color-white-light);
     cursor: pointer;
     user-select: none;
+    filter: none;
+    transform: translateY( calc( var(--app-border-width) * -1 ) );
+    transition: filter var(--animation-quick) var(--animation-ease);
+} .app-header-button:hover {
+    filter: invert(52%) sepia(61%) saturate(613%) hue-rotate(163deg) brightness(91%) contrast(88%);
 }
 
-div#app-header-time-centerer {
+div.app-header-centerer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: inherit;
-}
-
-div#app-header-time-container {
-    width: fit-content;
-    margin: 0px; padding: 2px;
-}
-
-#app-header-timer {
-    font-family: "Comfortaa bold";
-    font-size: 20px;
     margin: 0px 4px; padding: 0px;
+}
+
+div.app-header-shadow-container {
+    display: inline-flex;
+    background-color: var(--color-black-darker);
+    border-radius: var(--app-border-radius);
+    width: fit-content;
+    margin: 0px; padding: 6px 8px;
+    box-shadow: var(--app-box-shadow);
+}
+
+h1#app-header-timer-seconds, h1#app-header-timer-minutes, h1#app-header-timer-millis {
+    font-family: "fynewav";
+    font-size: 18px;
+    margin: 0px 2px; padding: 0px;
     color: var(--color-white-light);
     user-select: none;
 }
-
-div#app-header-tabs-centerer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin: 0px; margin-left: 8px;
+h1#app-header-timer-dots-1, h1#app-header-timer-dots-2 {
+    font-family: "fynewav light";
+    font-size: 18px;
+    margin: 0px 2px; padding: 0px;
+    color: var(--color-white-light);
+    user-select: none;
 }
 
 div#app-header-tabs-container {
     border: solid var(--app-header-border-width) var(--color-white-light);
     border-radius: var(--app-border-radius);
     width: fit-content;
-    height: 75%;
+    height: 70%;
     margin: 0px; padding: 2px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+input#app-header-bpm-value {
+    font-family: "fynewav";
+    font-size: 18px;
+    margin: 0px 2px; padding: 0px;
+    color: var(--color-white-light);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 40px;
+    user-select: none;
+}
+h1#app-header-bpm-text {
+    font-family: "fynewav light";
+    font-size: 16px;
+    margin: 0px 2px; padding: 0px;
+    margin-top: auto;
+    color: var(--color-white-light);
+    user-select: none;
 }
 
 .app-header-option {
@@ -117,13 +128,19 @@ div#app-header-tabs-container {
     transition: transform var(--animation-quick) var(--animation-ease);
 } .app-header-option:hover {transform: scale(var(--app-select-scale));}
 
-div#app-level-container {
-    height: 70%;
-    width: 30px;
-    background-color: blue;
+div.app-level-container {
+    width: 12px;
+    height: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    border-radius: var(--app-border-radius);
+    overflow: hidden;
+    box-shadow: var(--app-box-shadow);
+    background-color: var(--color-black-dark);
 }
-div#app-level-div {
-    height: 100%;
+div#app-soundLevel-div, div#app-procLevel-div {
+    height: 0%;
     width: 100%;
-    background-color: white;
+    background-color: var(--color-white-light);
 }
+div#app-procLevel-div {background-color: var(--color-red-light);}

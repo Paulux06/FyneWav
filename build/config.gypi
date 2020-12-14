@@ -77,7 +77,7 @@
     "v8_trace_maps": 0,
     "v8_use_siphash": 1,
     "want_separate_host_toolset": 0,
-    "nodedir": "/home/paulux/Documents/Code/FyneWav/10.1.5",
+    "nodedir": "/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5",
     "standalone_static_library": 1,
     "runtime": "electron",
     "target": "10.1.5",

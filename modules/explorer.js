@@ -4,16 +4,12 @@ const dirs = (p) => readdirSync(p).filter(f => statSync(join(p, f)).isDirectory(
 const files = (p) => readdirSync(p).filter(f => statSync(join(p, f)).isFile());
 var explorerElements = [];
 
-function setupExplorer() {
-    var explorer = document.getElementById("app-explorer-container");
-    var h2 = document.createElement('h2');
-    h2.innerHTML = "Dossiers";
-    h2.classList.add("folder-title");
-    explorer.appendChild(h2);
+function setupExplorer(explorer) {
     var foldersContainer = document.createElement('div');
     foldersContainer.id = "folders-container";
     explorer.appendChild(foldersContainer);
     createFolder('/home/paulux/Documents', foldersContainer);
+    setTimeout(()=>{createFolder('/home/paulux', foldersContainer);}, 100);
     toogleFolder(foldersContainer.firstChild, '/home/paulux/Documents');
 }
 
@@ -48,15 +44,19 @@ function createFile(path, parent) {
     fileName.classList.add("file-name");
     var fname = basename(path);
     fileName.innerHTML = fname;
-    if (!(extension == ".mp3" || extension == ".wav" ||
-          extension == ".ogg" || extension == ".m4a" ||
-          extension == ".flac")) fileName.style.color = "var(--color-primary-1)";
-    else fileName.style.color = "var(--color-primary-3)";
+    if (isSoundFile(extension)) fileName.style.color = "var(--color-green-light)";
+    else if (isSaveFile(extension)) fileName.style.color = "var(--color-yellow-light)";
+    else fileName.style.color = "var(--color-blue-light)";
     container.appendChild(fileName);
     parent.appendChild(container);
     explorerElements.push({div: container, type: 1, open: false, path: path})
     fileName.onclick = ()=>{
-        AUDIO_ENGINE.loadFile(path);
+        if (isSoundFile(extension)) WRAPPER.loadFile(path);
+        if (isSaveFile(extension))
+            setScrollMenu([
+                {title: "Ouvrir", action:()=>{console.log("ouvrir"); closeScrollMenu();}},
+                {title: "Supprimer", action:()=>{console.log("supprimer"); closeScrollMenu();}},
+            ], fileName);
     }
 }
 
@@ -112,4 +112,11 @@ function clearElements(container=document.createElement('div')) {
             container.removeChild(container.children[0])
         }, ANIMATION_NORMAL-10);
     }
+}
+
+function isSoundFile(extension) {
+    return extension == ".wav" || extension == ".ogg" || extension == ".flac";
+}
+function isSaveFile(extension) {
+    return extension == ".fnv";
 }

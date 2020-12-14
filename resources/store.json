@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Youtube downloader",
+        "type": "plugin",
+        "thumbnail": "https://www.freepnglogos.com/uploads/youtube-logo-png/youtube-logo-png-images-vector-and-psd-files-30.png",
+        "description": "A simple youtube song downloader for FyneWav."
+    },
+    {
+        "title": "Atom theme",
+        "type": "theme",
+        "thumbnail": "https://raw.githubusercontent.com/DanielPintilei/Cake/master/build/img/logo.png",
+        "description": "Make fynewav beautiful with this theme !"
+    },
+    {
+        "title": "Youtube downloader",
+        "type": "plugin",
+        "thumbnail": "https://www.freepnglogos.com/uploads/youtube-logo-png/youtube-logo-png-images-vector-and-psd-files-30.png",
+        "description": "A simple youtube song downloader for FyneWav."
+    },
+    {
+        "title": "Atom theme",
+        "type": "theme",
+        "thumbnail": "https://raw.githubusercontent.com/DanielPintilei/Cake/master/build/img/logo.png",
+        "description": "Make fynewav beautiful with this theme !"
+    }
+]

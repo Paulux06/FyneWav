@@ -1,0 +1,96 @@
+div.app-store-scroll-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.app-store-plugin-box {
+    display: inline-flex;
+    width: 80%;
+    margin: 4px 10%;
+    height: 10vh;
+    border: solid var(--app-border-width) var(--color-black-light);
+    border-radius: var(--app-border-radius);
+    box-shadow: 0px 0px 10px #0004;
+}
+
+.app-store-icon-div {
+    height: 100%;
+    width: fit-content;
+    padding: 6px;
+}
+
+.app-store-text-div {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-left: solid var(--app-border-width) var(--color-blue-dark);
+    padding: 0px 4px;
+}
+
+.app-store-title-div {
+    width: 100%;
+    height: fit-content;
+    display: inline-flex;
+    border-bottom: solid var(--app-border-width) var(--color-blue-light);
+}
+
+.app-store-desc-div {
+    width: 100%;
+    height: auto;
+}
+
+.app-store-type-div {
+    width: 100%;
+    height: fit-content;
+}
+
+.app-store-download-div {
+    width: fit-content;
+    height: fit-content;
+}
+
+.app-store-icon {
+    height: calc( 100% - 12px );
+    border-radius: var(--app-border-radius);
+}
+
+.app-store-title-text {
+    color: var(--color-blue-dark);
+    font-family: "fynewav";
+    font-size: 16px;
+    margin: 0px auto; padding: 0px;
+    margin-top: auto;
+}
+
+.app-store-desc-text {
+    color: var(--color-grey-light);
+    font-family: "fynewav";
+    font-size: 14px;
+    margin: 0px; padding: 0px;
+}
+
+.app-store-download-text {
+    color: var(--color-white-dark);
+    background-color: var(--color-black-dark);
+    border: solid var(--app-border-width) var(--color-grey-dark);
+    border-radius: var(--app-border-radius);
+    font-family: "fynewav";
+    font-size: 12px;
+    margin: 2px; padding: 1px 5px;
+    transition: color var(--animation-quick) var(--animation-ease),
+                background-color var(--animation-quick) var(--animation-ease),
+                border var(--animation-quick) var(--animation-ease);
+} .app-store-download-text:hover {
+    color: var(--color-white-light);
+    background-color: var(--color-black-light);
+    border: solid var(--app-border-width) var(--color-blue-light);
+}
+
+.app-store-type-text {
+    color: var(--color-grey-dark);
+    font-family: "fynewav";
+    font-size: 12px;
+    margin: 0px; padding: 0px;
+}

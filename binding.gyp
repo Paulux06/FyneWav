@@ -2,15 +2,15 @@
     "targets": [
         {
             "target_name": "engine",
-            "sources": ["./engine/engine.cpp"],
+            "sources": ["./engine/wrapper.cpp"],
             "cflags_cc" :["-fexceptions"],
             "include_dirs": [
-                "/home/paulux/Documents/Code/FyneWav/engine/include",
-                "/home/paulux/Documents/Code/FyneWav/engine"
+                "/home/paulux/Documents/Code/FyneWav/FyneWav/engine/include",
+                "/home/paulux/Documents/Code/FyneWav/FyneWav/engine"
             ],
             'link_settings': {
                 "libraries": [
-                    "-L/home/paulux/Documents/Code/FyneWav/engine/lib", "-lstk", "-lasound", "-lpthread", "-lm"
+                    "-L/home/paulux/Documents/Code/FyneWav/FyneWav/engine/lib", "-lstk", "-lasound", "-lpthread", "-lm"
                 ],
             },
             "defines": [

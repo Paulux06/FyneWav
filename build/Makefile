@@ -308,8 +308,8 @@ ifeq ($(strip $(foreach prefix,$(NO_LOAD),\
 endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
-cmd_regen_makefile = cd $(srcdir); /home/paulux/Documents/Code/FyneWav/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/paulux/Documents/Code/FyneWav/10.1.5" "-Dnode_gyp_dir=/home/paulux/Documents/Code/FyneWav/node_modules/node-gyp" "-Dnode_lib_file=/home/paulux/Documents/Code/FyneWav/10.1.5/<(target_arch)/node.lib" "-Dmodule_root_dir=/home/paulux/Documents/Code/FyneWav" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/home/paulux/Documents/Code/FyneWav/build/config.gypi -I/home/paulux/Documents/Code/FyneWav/node_modules/node-gyp/addon.gypi -I/home/paulux/Documents/Code/FyneWav/10.1.5/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/build/config.gypi $(srcdir)/10.1.5/include/node/common.gypi $(srcdir)/node_modules/node-gyp/addon.gypi $(srcdir)/binding.gyp
+cmd_regen_makefile = cd $(srcdir); /home/paulux/Documents/Code/FyneWav/FyneWav/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5" "-Dnode_gyp_dir=/home/paulux/Documents/Code/FyneWav/FyneWav/node_modules/node-gyp" "-Dnode_lib_file=/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/<(target_arch)/node.lib" "-Dmodule_root_dir=/home/paulux/Documents/Code/FyneWav/FyneWav" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/home/paulux/Documents/Code/FyneWav/FyneWav/build/config.gypi -I/home/paulux/Documents/Code/FyneWav/FyneWav/node_modules/node-gyp/addon.gypi -I/home/paulux/Documents/Code/FyneWav/FyneWav/10.1.5/include/node/common.gypi "--toplevel-dir=." binding.gyp
+Makefile: $(srcdir)/10.1.5/include/node/common.gypi $(srcdir)/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi $(srcdir)/binding.gyp
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included
